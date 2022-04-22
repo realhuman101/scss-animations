@@ -1,0 +1,68 @@
+:root {
+    --timing: 0.5s;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: lightslategray;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.content {
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+
+    @for $i from 2 through 3 {
+        & h1:nth-child(#{$i}) {
+            animation-delay: calc(var(--timing)*calc(#{$i}-1));
+        }
+    }
+    & h1:nth-child(2)::after {
+        animation-delay: 0.1s;
+    }
+
+    & h1:nth-child(3)::after {
+        animation-delay: 0.2s;
+    }
+}
+
+h1 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 350%;
+    height: fit-content;
+    width: fit-content;
+    margin: 0;
+    position: relative;
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: lightslategray;
+        position: absolute;
+        left: 0;
+        bottom: -100%;
+        animation: slide 0.5s ease;
+    }
+}
+
+@keyframes slide {
+    from {
+        bottom: 0%;
+    }
+    to {
+        bottom: -100%;
+    }
+}
