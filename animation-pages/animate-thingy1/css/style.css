@@ -27,7 +27,7 @@ body {
 }
 
 .content {
-  margin: auto;
+  margin: 0 auto;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -114,6 +114,28 @@ h1::-moz-selection {
 h1::selection {
   color: black;
   background-color: yellow;
+}
+
+button.learnmore {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  background-color: #ebb423;
+  color: black;
+  margin: 50px auto;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  -webkit-transition: color .3s ease, background-color .25s ease;
+  transition: color .3s ease, background-color .25s ease;
+}
+
+button.learnmore:hover,
+button.learnmore:focus {
+  color: white;
+  background-color: #283228;
 }
 
 @-webkit-keyframes slide {

@@ -19,7 +19,7 @@ body {
 }
 
 .content {
-    margin: auto;
+    margin: 0 auto;
     height: fit-content;
     width: fit-content;
     display: flex;
@@ -56,6 +56,27 @@ h1 {
         color: black;
         background-color: yellow;
     }
+}
+
+button.learnmore {
+    width: fit-content;
+    position: relative;
+    background-color: #ebb423;
+    color: black;
+    margin: 50px auto;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    transition: 
+        color .3s ease,
+        background-color .25s ease;
+}
+
+button.learnmore:hover,
+button.learnmore:focus {
+    color: white;
+    background-color: #283228;
 }
 
 @keyframes slide {
