@@ -20,6 +20,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 2px;
   -webkit-filter: brightness(1);
           filter: brightness(1);
 }

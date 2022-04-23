@@ -12,6 +12,7 @@ body {
 
 .siblings {
     display: flex;
+    gap: 2px;
     filter: brightness(1);
 
     & img {
