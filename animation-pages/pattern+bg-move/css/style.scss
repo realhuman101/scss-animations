@@ -1,0 +1,49 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.content {
+    & img,
+    & div {
+        width: 500px;
+        height: 300px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    & .main {
+        z-index: 1;
+    }
+
+    & .elements {
+        & img,
+        & div {
+            transition: transform .3s ease-in-out;
+        }
+
+        & img {
+            transform: translate(-40%,-40%);
+        }
+
+        & div {
+            transform: translate(-60%,-60%);
+        }
+    }
+
+    &:hover .elements {
+        & img {
+            transform: translate(-30%,-30%);
+        }
+
+        & div {
+            transform: translate(-70%,-70%);
+        }
+    }
+}
