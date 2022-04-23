@@ -23,16 +23,22 @@ body {
     justify-content: center;
     gap: 1em;
 
-    @for $i from 2 through 3 {
-        & h1:nth-child(#{$i})::after {
-            animation-delay: $i/6+unquote("s");
+    @for $i from 1 through 3 {
+        & h1:nth-child(#{$i})::before {
+            content: attr(data-text);
+            position: absolute;
+            color: white;
+            right: 0;
+            bottom: 0;
+            animation: slide 1.5s ease;
+            animation-delay: $i/10+unquote("s");
         }
     }
 }
 
 h1 {
     text-transform: uppercase;
-    color: white;
+    color: transparent;
     font-size: 350%;
     height: fit-content;
     width: fit-content;
@@ -46,16 +52,16 @@ h1 {
         background-color: lightslategray;
         position: absolute;
         left: 0;
-        bottom: -100%;
-        animation: slide 0.5s ease;
+        top: 100%;
     }
 }
 
 @keyframes slide {
     from {
-        bottom: 0%;
-    }
-    to {
         bottom: -100%;
+    }
+
+    to {
+        bottom: 0;
     }
 }

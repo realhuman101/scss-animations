@@ -40,19 +40,45 @@ body {
   gap: 1em;
 }
 
-.content h1:nth-child(2)::after {
-  -webkit-animation-delay: 0.33333s;
-          animation-delay: 0.33333s;
+.content h1:nth-child(1)::before {
+  content: attr(data-text);
+  position: absolute;
+  color: white;
+  right: 0;
+  bottom: 0;
+  -webkit-animation: slide 1.5s ease;
+          animation: slide 1.5s ease;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 
-.content h1:nth-child(3)::after {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+.content h1:nth-child(2)::before {
+  content: attr(data-text);
+  position: absolute;
+  color: white;
+  right: 0;
+  bottom: 0;
+  -webkit-animation: slide 1.5s ease;
+          animation: slide 1.5s ease;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.content h1:nth-child(3)::before {
+  content: attr(data-text);
+  position: absolute;
+  color: white;
+  right: 0;
+  bottom: 0;
+  -webkit-animation: slide 1.5s ease;
+          animation: slide 1.5s ease;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 h1 {
   text-transform: uppercase;
-  color: white;
+  color: transparent;
   font-size: 350%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -71,26 +97,24 @@ h1::after {
   background-color: lightslategray;
   position: absolute;
   left: 0;
-  bottom: -100%;
-  -webkit-animation: slide 0.5s ease;
-          animation: slide 0.5s ease;
+  top: 100%;
 }
 
 @-webkit-keyframes slide {
   from {
-    bottom: 0%;
+    bottom: -100%;
   }
   to {
-    bottom: -100%;
+    bottom: 0;
   }
 }
 
 @keyframes slide {
   from {
-    bottom: 0%;
+    bottom: -100%;
   }
   to {
-    bottom: -100%;
+    bottom: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
