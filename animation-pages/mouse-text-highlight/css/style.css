@@ -48,8 +48,8 @@ h1::before {
 }
 
 h1:hover::before {
-  -webkit-animation: slidein .3s forwards;
-          animation: slidein .3s forwards;
+  -webkit-animation: slidein .3s forwards normal;
+          animation: slidein .3s forwards normal;
 }
 
 h1:not(:hover)::before {

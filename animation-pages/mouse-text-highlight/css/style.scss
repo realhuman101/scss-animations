@@ -35,7 +35,7 @@ h1 {
     }
 
     &:hover::before {
-        animation: slidein .3s forwards;
+        animation: slidein .3s forwards normal;
     }
 
     &:not(:hover)::before {
