@@ -20,23 +20,32 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+
+.siblings img {
+  -webkit-transition: -webkit-filter .2s ease-in-out;
+  transition: -webkit-filter .2s ease-in-out;
+  transition: filter .2s ease-in-out;
+  transition: filter .2s ease-in-out, -webkit-filter .2s ease-in-out;
 }
 
 .siblings:hover {
   cursor: pointer;
 }
 
-.siblings img:nth-child(1):hover {
+.siblings:hover img:nth-child(1):not(:hover) {
   -webkit-filter: brightness(0.5);
           filter: brightness(0.5);
 }
 
-.siblings img:nth-child(2):hover {
+.siblings:hover img:nth-child(2):not(:hover) {
   -webkit-filter: brightness(0.5);
           filter: brightness(0.5);
 }
 
-.siblings img:nth-child(3):hover {
+.siblings:hover img:nth-child(3):not(:hover) {
   -webkit-filter: brightness(0.5);
           filter: brightness(0.5);
 }
