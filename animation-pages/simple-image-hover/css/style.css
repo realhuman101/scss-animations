@@ -1,0 +1,87 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #b651b6;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+*:focus {
+  outline: none;
+}
+
+.content {
+  position: fixed;
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.content img {
+  border-radius: 50%;
+  border: 5px solid white;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-box-shadow: 6px 6px 20px 0px black;
+          box-shadow: 6px 6px 20px 0px black;
+  -webkit-transition: -webkit-filter .4s linear;
+  transition: -webkit-filter .4s linear;
+  transition: filter .4s linear;
+  transition: filter .4s linear, -webkit-filter .4s linear;
+}
+
+.content p {
+  color: white;
+  position: relative;
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+.content p::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: white;
+  display: block;
+  margin: 5px auto;
+  -webkit-transition: width .5s ease-in-out;
+  transition: width .5s ease-in-out;
+}
+
+.content:hover, .content:focus {
+  cursor: pointer;
+}
+
+.content:hover p::after, .content:focus p::after {
+  width: 100%;
+  background-color: white;
+}
+
+.content:hover img, .content:focus img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+/*# sourceMappingURL=style.css.map */
