@@ -1,0 +1,25 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.siblings {
+    display: flex;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    @for $i from 1 through 3 {
+        & img:nth-child(#{$i}):hover {
+            filter: brightness(.5);
+        }
+    }
+}

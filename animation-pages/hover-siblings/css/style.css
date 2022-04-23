@@ -1,0 +1,43 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.siblings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.siblings:hover {
+  cursor: pointer;
+}
+
+.siblings img:nth-child(1):hover {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+
+.siblings img:nth-child(2):hover {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+
+.siblings img:nth-child(3):hover {
+  -webkit-filter: brightness(0.5);
+          filter: brightness(0.5);
+}
+/*# sourceMappingURL=style.css.map */
