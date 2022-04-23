@@ -1,11 +1,9 @@
 .option {
-    background-color: gray;
     font-style: normal;
     color: black;
     text-decoration: none;
     width: fit-content;
     padding: 10px;
-    border-radius: 3px;
     outline: none;
 }
 
@@ -16,7 +14,9 @@
 }
 
 .option:hover,
-.option:focus {
+.option:focus,
+.option:focus-within {
     background-color: lightgray;
     cursor: pointer;
+    outline: none !important;
 }
