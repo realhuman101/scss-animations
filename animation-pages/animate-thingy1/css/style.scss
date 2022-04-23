@@ -8,7 +8,6 @@ body {
 }
 
 body {
-    // background-color: lightslategray;
     background-image: url('https://i.picsum.photos/id/1012/1500/1500.jpg?hmac=lgWrYzLJY3PRQ9uUCB-vo69AFXziDP3haEPPZKIMi5M');
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,6 +15,7 @@ body {
     justify-content: center;
     align-content: center;
     flex-direction: column;
+    margin: 0;
 }
 
 .content {
@@ -23,14 +23,13 @@ body {
     height: fit-content;
     width: fit-content;
     display: flex;
+    position: relative;
     justify-content: center;
+    overflow: hidden;
     gap: 1em;
 
     @for $i from 1 through 3 {
-        & h1:nth-child(#{$i})::before {
-            content: attr(data-text);
-            position: absolute;
-            color: white;
+        & h1:nth-child(#{$i}) {
             right: 0;
             bottom: 0;
             user-select: text;
@@ -38,25 +37,20 @@ body {
             height: 100%;
             display: block;
             animation-delay: $i/10+unquote("s");
-            overflow: hidden;
-
-            &::selection {
-                color: black;
-                background-color: yellow;
-            }
         }
     }
 }
 
 h1 {
     text-transform: uppercase;
-    color: transparent;
+    color: white;
     font-size: 350%;
     height: fit-content;
     width: fit-content;
     margin: 0;
+    left: 0;
+    bottom: 0;
     position: relative;
-    overflow: hidden;
 
     &::selection {
         color: black;

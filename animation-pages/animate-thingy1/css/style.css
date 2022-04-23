@@ -23,6 +23,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 0;
 }
 
 .content {
@@ -36,16 +37,15 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
   gap: 1em;
 }
 
-.content h1:nth-child(1)::before {
-  content: attr(data-text);
-  position: absolute;
-  color: white;
+.content h1:nth-child(1) {
   right: 0;
   bottom: 0;
   -webkit-user-select: text;
@@ -58,23 +58,9 @@ body {
   display: block;
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
-  overflow: hidden;
 }
 
-.content h1:nth-child(1)::before::-moz-selection {
-  color: black;
-  background-color: yellow;
-}
-
-.content h1:nth-child(1)::before::selection {
-  color: black;
-  background-color: yellow;
-}
-
-.content h1:nth-child(2)::before {
-  content: attr(data-text);
-  position: absolute;
-  color: white;
+.content h1:nth-child(2) {
   right: 0;
   bottom: 0;
   -webkit-user-select: text;
@@ -87,23 +73,9 @@ body {
   display: block;
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
-  overflow: hidden;
 }
 
-.content h1:nth-child(2)::before::-moz-selection {
-  color: black;
-  background-color: yellow;
-}
-
-.content h1:nth-child(2)::before::selection {
-  color: black;
-  background-color: yellow;
-}
-
-.content h1:nth-child(3)::before {
-  content: attr(data-text);
-  position: absolute;
-  color: white;
+.content h1:nth-child(3) {
   right: 0;
   bottom: 0;
   -webkit-user-select: text;
@@ -116,22 +88,11 @@ body {
   display: block;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
-  overflow: hidden;
-}
-
-.content h1:nth-child(3)::before::-moz-selection {
-  color: black;
-  background-color: yellow;
-}
-
-.content h1:nth-child(3)::before::selection {
-  color: black;
-  background-color: yellow;
 }
 
 h1 {
   text-transform: uppercase;
-  color: transparent;
+  color: white;
   font-size: 350%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -140,8 +101,9 @@ h1 {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0;
+  left: 0;
+  bottom: 0;
   position: relative;
-  overflow: hidden;
 }
 
 h1::-moz-selection {
