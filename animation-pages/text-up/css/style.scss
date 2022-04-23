@@ -31,9 +31,10 @@ body {
     @for $i from 1 through 3 {
         & h1:nth-child(#{$i}) {
             right: 0;
-            bottom: 0;
+            bottom: -100%;
             user-select: text;
             animation: slide 1.5s ease;
+            animation-fill-mode: forwards;
             height: 100%;
             display: block;
             animation-delay: $i/10+unquote("s");

@@ -47,13 +47,15 @@ body {
 
 .content h1:nth-child(1) {
   right: 0;
-  bottom: 0;
+  bottom: -100%;
   -webkit-user-select: text;
      -moz-user-select: text;
       -ms-user-select: text;
           user-select: text;
   -webkit-animation: slide 1.5s ease;
           animation: slide 1.5s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   height: 100%;
   display: block;
   -webkit-animation-delay: 0.1s;
@@ -62,13 +64,15 @@ body {
 
 .content h1:nth-child(2) {
   right: 0;
-  bottom: 0;
+  bottom: -100%;
   -webkit-user-select: text;
      -moz-user-select: text;
       -ms-user-select: text;
           user-select: text;
   -webkit-animation: slide 1.5s ease;
           animation: slide 1.5s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   height: 100%;
   display: block;
   -webkit-animation-delay: 0.2s;
@@ -77,13 +81,15 @@ body {
 
 .content h1:nth-child(3) {
   right: 0;
-  bottom: 0;
+  bottom: -100%;
   -webkit-user-select: text;
      -moz-user-select: text;
       -ms-user-select: text;
           user-select: text;
   -webkit-animation: slide 1.5s ease;
           animation: slide 1.5s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   height: 100%;
   display: block;
   -webkit-animation-delay: 0.3s;
