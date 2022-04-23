@@ -8,7 +8,10 @@ body {
 }
 
 body {
-    background-color: lightslategray;
+    // background-color: lightslategray;
+    background-image: url('https://i.picsum.photos/id/1012/1500/1500.jpg?hmac=lgWrYzLJY3PRQ9uUCB-vo69AFXziDP3haEPPZKIMi5M');
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -30,8 +33,17 @@ body {
             color: white;
             right: 0;
             bottom: 0;
+            user-select: text;
             animation: slide 1.5s ease;
+            height: 100%;
+            display: block;
             animation-delay: $i/10+unquote("s");
+            overflow: hidden;
+
+            &::selection {
+                color: black;
+                background-color: yellow;
+            }
         }
     }
 }
@@ -44,15 +56,11 @@ h1 {
     width: fit-content;
     margin: 0;
     position: relative;
+    overflow: hidden;
 
-    &::after {
-        content: '';
-        width: 100%;
-        height: 100%;
-        background-color: lightslategray;
-        position: absolute;
-        left: 0;
-        top: 100%;
+    &::selection {
+        color: black;
+        background-color: yellow;
     }
 }
 
