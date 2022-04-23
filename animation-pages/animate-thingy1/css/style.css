@@ -1,5 +1,5 @@
 :root {
-  --timing: 0.5s;
+  --timing: 1s;
 }
 
 html,
@@ -40,24 +40,14 @@ body {
   gap: 1em;
 }
 
-.content h1:nth-child(2) {
-  -webkit-animation-delay: calc(var(--timing)*calc(2-1));
-          animation-delay: calc(var(--timing)*calc(2-1));
-}
-
-.content h1:nth-child(3) {
-  -webkit-animation-delay: calc(var(--timing)*calc(3-1));
-          animation-delay: calc(var(--timing)*calc(3-1));
-}
-
 .content h1:nth-child(2)::after {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
+  -webkit-animation-delay: 0.33333s;
+          animation-delay: 0.33333s;
 }
 
 .content h1:nth-child(3)::after {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 h1 {

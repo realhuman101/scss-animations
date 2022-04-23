@@ -1,5 +1,5 @@
 :root {
-    --timing: 0.5s;
+    --timing: 1s;
 }
 
 html,
@@ -24,16 +24,9 @@ body {
     gap: 1em;
 
     @for $i from 2 through 3 {
-        & h1:nth-child(#{$i}) {
-            animation-delay: calc(var(--timing)*calc(#{$i}-1));
+        & h1:nth-child(#{$i})::after {
+            animation-delay: $i/6+unquote("s");
         }
-    }
-    & h1:nth-child(2)::after {
-        animation-delay: 0.1s;
-    }
-
-    & h1:nth-child(3)::after {
-        animation-delay: 0.2s;
     }
 }
 
