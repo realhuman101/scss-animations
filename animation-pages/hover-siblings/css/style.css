@@ -35,17 +35,7 @@ body {
   cursor: pointer;
 }
 
-.siblings:hover img:nth-child(1):not(:hover) {
-  -webkit-filter: brightness(0.5);
-          filter: brightness(0.5);
-}
-
-.siblings:hover img:nth-child(2):not(:hover) {
-  -webkit-filter: brightness(0.5);
-          filter: brightness(0.5);
-}
-
-.siblings:hover img:nth-child(3):not(:hover) {
+.siblings:hover img:not(:hover) {
   -webkit-filter: brightness(0.5);
           filter: brightness(0.5);
 }

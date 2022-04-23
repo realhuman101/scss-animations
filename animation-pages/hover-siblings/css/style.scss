@@ -13,17 +13,15 @@ body {
 .siblings {
     display: flex;
     filter: brightness(1);
-    
+
     & img {
         transition: filter .2s ease-in-out;
     }
 
     &:hover {
         cursor: pointer;
-        @for $i from 1 through 3 {
-            & img:nth-child(#{$i}):not(:hover) {
-                filter: brightness(.5);
-            }
+        & img:not(:hover) {
+            filter: brightness(.5);
         }
     }
 }
