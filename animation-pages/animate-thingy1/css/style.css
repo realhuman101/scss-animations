@@ -136,6 +136,7 @@ button.learnmore:hover,
 button.learnmore:focus {
   color: white;
   background-color: #283228;
+  cursor: pointer;
 }
 
 @-webkit-keyframes slide {
