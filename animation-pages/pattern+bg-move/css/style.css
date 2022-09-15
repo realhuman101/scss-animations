@@ -7,46 +7,29 @@ body {
   margin: 0;
 }
 
-.content img,
-.content div {
+.content img, .content div {
   width: 500px;
   height: 300px;
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
 .content .main {
   z-index: 1;
 }
-
-.content .elements img,
-.content .elements div {
-  -webkit-transition: -webkit-transform .3s ease-in-out;
-  transition: -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
-  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+.content .elements img, .content .elements div {
+  transition: transform 0.3s ease-in-out;
 }
-
 .content .elements img {
-  -webkit-transform: translate(-40%, -40%);
-          transform: translate(-40%, -40%);
+  transform: translate(-40%, -40%);
 }
-
 .content .elements div {
-  -webkit-transform: translate(-60%, -60%);
-          transform: translate(-60%, -60%);
+  transform: translate(-60%, -60%);
 }
-
 .content:hover .elements img {
-  -webkit-transform: translate(-30%, -30%);
-          transform: translate(-30%, -30%);
+  transform: translate(-30%, -30%);
 }
-
 .content:hover .elements div {
-  -webkit-transform: translate(-70%, -70%);
-          transform: translate(-70%, -70%);
-}
-/*# sourceMappingURL=style.css.map */
+  transform: translate(-70%, -70%);
+}/*# sourceMappingURL=style.css.map */
