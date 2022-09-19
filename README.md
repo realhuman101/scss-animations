@@ -1,2 +1,2 @@
-# CSS Animations
- A bunch of CSS (used SCSS actually) animations I created to practice my SCSS
+# SCSS Animations
+ A bunch of SCSS/CSS animations I created to practice my SCSS
