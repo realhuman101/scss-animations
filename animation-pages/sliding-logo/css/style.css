@@ -35,8 +35,29 @@ body {
   font-size: 80px;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  color: #ffff00;
+  color: #727a65;
+  position: relative;
+}
+.logo .logoSide::after {
+  content: attr(data-content);
+  color: white;
+  position: absolute;
+  font-size: inherit;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  font-weight: 700;
+  margin: auto;
   z-index: 1;
+}
+.logo .logoSide.left::after {
+  -webkit-animation: logoHideLeft 1.5s infinite ease-in-out;
+          animation: logoHideLeft 1.5s infinite ease-in-out;
+}
+.logo .logoSide.right::after {
+  -webkit-animation: logoHideRight 1.5s infinite ease-in-out;
+          animation: logoHideRight 1.5s infinite ease-in-out;
 }
 .logo .logoSelector {
   position: absolute;
@@ -49,8 +70,8 @@ body {
   margin: auto;
   border-radius: 10px;
   background-color: #727a65;
-  -webkit-animation: slideLogo 1s infinite ease-in-out;
-          animation: slideLogo 1s infinite ease-in-out;
+  -webkit-animation: slideLogo 1.5s infinite ease-in-out;
+          animation: slideLogo 1.5s infinite ease-in-out;
 }
 
 @-webkit-keyframes slideLogo {
@@ -96,5 +117,73 @@ body {
   100% {
     left: 0;
     right: 50%;
+  }
+}
+@-webkit-keyframes logoHideLeft {
+  0% {
+    opacity: 1;
+  }
+  43% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes logoHideLeft {
+  0% {
+    opacity: 1;
+  }
+  43% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes logoHideRight {
+  0% {
+    opacity: 0;
+  }
+  43% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  86% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes logoHideRight {
+  0% {
+    opacity: 0;
+  }
+  43% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  86% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }/*# sourceMappingURL=style.css.map */

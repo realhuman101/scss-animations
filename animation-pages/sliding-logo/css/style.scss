@@ -33,8 +33,29 @@ body {
 		font-size: 80px;
 		font-family: 'Poppins', sans-serif;
 		font-weight: 700;
-		color: #ffff00;
-		z-index: 1;
+		color: #727a65;
+		position: relative;
+
+		&::after {
+			content: attr(data-content);
+			color: white;
+			position: absolute;
+			font-size: inherit;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			font-weight: 700;
+			margin: auto;
+			z-index: 1;
+		}
+
+		&.left::after {
+			animation: logoHideLeft 1.5s infinite ease-in-out;
+		}
+		&.right::after {
+			animation: logoHideRight 1.5s infinite ease-in-out;
+		}
 	}
 
 	& .logoSelector {
@@ -49,7 +70,7 @@ body {
 		border-radius: 10px;
 		background-color: #727a65;
 
-		animation: slideLogo 1s infinite ease-in-out;
+		animation: slideLogo 1.5s infinite ease-in-out;
 	}
 }
 
@@ -77,5 +98,48 @@ body {
 	100% {
 		left: 0;
 		right: 50%;
+	}
+}
+
+@keyframes logoHideLeft {
+	0% {
+		opacity: 1;
+	}
+
+	43% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	86% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes logoHideRight {
+	0% {
+		opacity: 0;
+	}
+
+	43% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	86% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
 	}
 }
