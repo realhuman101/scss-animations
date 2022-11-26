@@ -13,10 +13,11 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: #722a60;
 }
 
 .logo {
-	width: 610px;
+	width: 810px;
 	height: 250px;
 	border: 4px solid #727a65;
 	padding: 10px;
@@ -30,11 +31,15 @@ body {
 		padding: 0;
 		margin: auto 0;
 		text-align: center;
-		font-size: 80px;
+		font-size: calc(40px + 2.5vw);
 		font-family: 'Poppins', sans-serif;
 		font-weight: 700;
 		color: #727a65;
 		position: relative;
+
+		@media screen and (min-width: 1500px) {
+			font-size: 87.5px;
+		}
 
 		&::after {
 			content: attr(data-content);
