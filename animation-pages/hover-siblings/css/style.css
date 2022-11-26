@@ -5,39 +5,22 @@ body {
 
 body {
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .siblings {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 2px;
-  -webkit-filter: brightness(1);
-          filter: brightness(1);
+  filter: brightness(1);
 }
-
 .siblings img {
-  -webkit-transition: -webkit-filter .2s ease-in-out;
-  transition: -webkit-filter .2s ease-in-out;
-  transition: filter .2s ease-in-out;
-  transition: filter .2s ease-in-out, -webkit-filter .2s ease-in-out;
+  transition: filter 0.2s ease-in-out;
 }
-
 .siblings:hover {
   cursor: pointer;
 }
-
 .siblings:hover img:not(:hover) {
-  -webkit-filter: brightness(0.5);
-          filter: brightness(0.5);
-}
-/*# sourceMappingURL=style.css.map */
+  filter: brightness(0.5);
+}/*# sourceMappingURL=style.css.map */
